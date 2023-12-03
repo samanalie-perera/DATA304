@@ -1,0 +1,66 @@
+---
+title: "Assignment1_DATA304"
+author: "Samanalie Perera, 300486075"
+date: "17th March 2023"
+output:
+  bookdown::pdf_document2: default
+  html_document:
+    toc: yes
+    df_print: paged
+  rmarkdown::pdf_document:
+    toc: yes
+    number_sections: yes
+    keep_md: yes
+    fig_caption: yes
+  pdf_document:
+    toc: yes
+mainfont: Times New Roman
+header-includes:
+- \usepackage[T1]{fontenc}
+- \renewcommand{\topfraction}{.85}
+---
+
+```{r setup, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+## Problem 1:
+Consider n independent identically distributed random variables X1, X2, . . . , Xn which obey the Bernoulli distribution with probability of success Pr(Xi = 1) = p, with $0 <= p <= 1$. What is the distribution of U = min{X1, X2, . . . , Xn}? What is the distribution of V = max{X1, X2, . . . , Xn}
+
+
+
+
+## Problem 2: 
+How would you describe, using the Kendall-Lee notation, a system in which packages arrive at regular
+times, e.g., one every five seconds, they are checked by four customer service representatives (CSR) that
+take a random time to verify their contents (this time may be assumed exponentially distributed with
+mean $n > 0$, and the CSR do not communicate). Every now and then, packages arrive with a red tag;
+red-tagged packages are immediately opened by any of the four CSR. The maximum line capacity is of
+one hundred packages, and they arrive from the whole world.
+
+ Using ChatGPT
+ * GI/GI/4+G/FCFS/100/$\infty$
+
+* The model that describes the time between arrivals of customers follows a general probability distribution, which is indicated by the first GI. The general probability means that the times of arrivals of the packages will vary. The 2nd GI is the distribution that characterizes the service times, which also follows a general probability distribution (GI). This means that the time it takes for the customers to be served will vary. The number of service channels is 4. This represents the number of customer service representatives. The +G is for the red-tagged packages that arrive at random times and that is opened immediately by the servers. The queuing discipline is described as first come, first served (FCFS), which means that whatever order the packages come in will be served in that order, so the first package that arrives will be the first that will be served. The 100 indicates the maximum number of packages that can be allowed in line. The infinity is size of the population from which the customers come from.  
+
+
+## Problem 3:
+Still referring to the previous system, assume all CSR are busy. What is the expected time for the first
+red-tagged package in the line to be opened? What is the expected time for the first red-tagged package
+in the line to be checked.
+
+* Assuming all CSR are busy, the expected time for the first red-tagged package in the line to be opened would follow an exponential distribution with a rate of 4n. This means the expected time to open the first red-tagged package is 1/(4n) seconds. This is because red-tagged packages are immediately opened by which ever CSR is available.
+
+
+## Problem 4: 
+Consider the Erlang distribution characterized by the following probability density function:
+where $\theta$, $z > 0$ and $k E N$ (the natural numbers excluding zero). Find a parametrization for this density
+that uses the mean $\mu = E(Z)$. Show the code that implements this probability density function. Compute
+the variance using this parametrization. Show plots of this reparametrized density with $\mu = 3$ and varying values of the variance.
+
+
+
+
+
+
+
